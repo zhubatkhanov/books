@@ -1,0 +1,14 @@
+{% extends 'books/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="main" style="padding: 30px;">
+    <h1 style="padding-top: 70px; margin-bottom: 30px;">{{ book_item.name }}</h1>
+    <h5 style="margin-bottom: 30px;">{{ book_item.description }}</h5>
+    <h4 style="matgin-bottom: 30px">{{ book_item.publication_date }}</h4>
+    <img class="card-img-top" src="{{ book_item.image.url }}" alt="" style="max-width: 200px; max-height: 300px;">
+    <p style="margin-bottom: 30px; font-weight: 700;">{{ book_item.category.name }}</p>
+    <h6>Отзывы: </h6>
+</div>
+
+{% endblock %}

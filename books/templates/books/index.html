@@ -1,0 +1,26 @@
+{% extends 'books/base.html' %}
+{% load static %}
+{% block css %}
+    <link href="{% static 'vendor/css/index1.css' %}" rel="stylesheet">
+{% endblock %}
+{% block content %}
+    <section>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h1 class="mt-5">Books catalog</h1>
+                <p>
+                    Books
+                </p>
+                <button id="start-purchase-btn" type="button" class="btn btn-lg">
+                    <a id="start-purchase-link" href="{% url 'books:books' %}">
+                        Смотреть каталог
+                    </a>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+

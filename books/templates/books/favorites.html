@@ -1,0 +1,13 @@
+{% extends 'books/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="main" style="padding: 30px; margin-top: 80px;">
+{% for favorite in favorites %}
+    <p style="font-size: 24px; font-weight: 700">
+        {{ favorite.book.name }}
+        <a href="{% url 'books:favorite_remove' favorite.id %}" style="padding-left: 50px;">Delete</a>
+    </p>
+{% endfor %}
+</div>
+{% endblock %}
